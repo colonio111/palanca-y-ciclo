@@ -1,0 +1,122 @@
+{
+  "autora": {
+    "nombre": "Lucía Pamela Colonio Yaringaño",
+    "facultad": "Facultad de Economía",
+    "universidad": "Universidad Nacional del Centro del Perú",
+    "ciudad": "Huancayo, Perú",
+    "curso": "Finanzas I (055D)",
+    "periodo": "Unidad II, 2026-II",
+    "docente": "Dr. Ciro Iván Machacuay Meza",
+    "correo": "e_2024200495A@uncp.edu.pe"
+  },
+  "articulos": [
+    {
+      "id": "articulo-1",
+      "tema": "Tema 85: apalancamiento bancario y ciclo del crédito",
+      "titulo": "Prociclicidad del apalancamiento de la banca múltiple peruana frente al ciclo del crédito y del producto, 2016–2025",
+      "corto": "Apalancamiento y ciclo del crédito",
+      "pregunta": "¿En qué medida el apalancamiento de la banca múltiple peruana actuó como palanca procíclica frente al ciclo del crédito y del producto entre 2016 y 2025?",
+      "repositorio": "https://github.com/colonio111/apalancamiento-del-sistema-bancario-peruano-y-ciclo-del-cr-dito",
+      "cifras": [
+        {
+          "valor": "0,91",
+          "texto": "% sube el apalancamiento por cada 1 % que crece el activo"
+        },
+        {
+          "valor": "15",
+          "texto": "bancos observados durante 120 meses"
+        },
+        {
+          "valor": "1 800",
+          "texto": "observaciones banco-mes"
+        },
+        {
+          "valor": "20",
+          "texto": "estudios revisados, 2022–2026"
+        }
+      ],
+      "hipotesis": [
+        {
+          "id": "H1",
+          "nombre": "Prociclicidad",
+          "veredicto": "Se confirma",
+          "estado": "si",
+          "detalle": "β = 0,905 (mensual) y 0,856 (12 meses), significativo al 1 %."
+        },
+        {
+          "id": "H2",
+          "nombre": "Sincronía con el ciclo",
+          "veredicto": "En parte",
+          "estado": "parte",
+          "detalle": "Brecha del PBI 0,278 al controlar la pandemia; −0,189 sin esos meses."
+        },
+        {
+          "id": "H3",
+          "nombre": "Heterogeneidad",
+          "veredicto": "Se confirma",
+          "estado": "si",
+          "detalle": "De 0,887 a 0,983 tras la pandemia; el efecto del colchón de capital solo al 10 %."
+        }
+      ],
+      "descargas": "Colonio"
+    },
+    {
+      "id": "articulo-2",
+      "tema": "Complementa el Tema 85: excedente de capital y oferta de crédito",
+      "titulo": "Excedente de capital regulatorio y oferta de crédito de la banca múltiple peruana en la transición a Basilea III, 2016–2025",
+      "corto": "Capital de sobra y crédito",
+      "pregunta": "¿En qué medida el excedente de capital de cada banco sobre el límite global vigente condicionó su oferta de crédito, su respuesta a la política monetaria y su ajuste durante la transición a Basilea III, entre 2016 y 2025?",
+      "repositorio": "https://github.com/colonio111/excedente-capital-banca-peruana-basilea-iii",
+      "descargas": "Colonio_A2",
+      "cifras": [
+        {
+          "valor": "0,6",
+          "unidad": "",
+          "texto": "puntos más de crecimiento real anual del crédito por cada punto de excedente"
+        },
+        {
+          "valor": "15",
+          "texto": "bancos observados durante 120 meses"
+        },
+        {
+          "valor": "1 800",
+          "texto": "observaciones banco-mes"
+        },
+        {
+          "valor": "10",
+          "texto": "estudios revisados, 2022–2025"
+        }
+      ],
+      "hipotesis": [
+        {
+          "id": "H1",
+          "nombre": "Excedente y crédito",
+          "veredicto": "En parte",
+          "estado": "parte",
+          "detalle": "β = 0,605 (p = 0,11) con efectos de mes y controles; significativo sin Alfin Banco (1,224) o sin los bancos pequeños (2,504)."
+        },
+        {
+          "id": "H2",
+          "nombre": "Canal del capital",
+          "veredicto": "No se confirma",
+          "estado": "no",
+          "detalle": "Los bancos con más excedente no amortiguaron las alzas de la tasa: a los 18 meses la diferencia es de −7,8 (p = 0,051)."
+        },
+        {
+          "id": "H3",
+          "nombre": "Alza del límite por grupos",
+          "veredicto": "No identificada",
+          "estado": "nd",
+          "detalle": "Los grupos ya divergían antes de 2023 y el placebo de 2018 resulta significativo."
+        },
+        {
+          "id": "H4",
+          "nombre": "Recomposición por capital",
+          "veredicto": "Se confirma",
+          "estado": "si",
+          "detalle": "Entre 2023 y 2025 el ratio subió 14,3 puntos logarítmicos con un patrimonio efectivo 23,2 % mayor."
+        }
+      ]
+    }
+  ]
+}

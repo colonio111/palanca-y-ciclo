@@ -1,0 +1,26 @@
+{
+  "name": "palanca-y-ciclo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "importar:a1": "node --env-file-if-exists=.env.local scripts/importar-articulo-1.ts",
+    "importar:a2": "node --env-file-if-exists=.env.local scripts/importar-articulo-2.ts",
+    "check": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.8",
+    "@types/node": "^26.6.11",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource/spectral": "^5.3.0",
+    "katex": "^0.19.1",
+    "write-excel-file": "^4.1.1"
+  }
+}

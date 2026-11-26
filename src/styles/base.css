@@ -1,0 +1,106 @@
+/* Telar del Mantaro: añil, cochinilla, q'olle y chilca sobre cal fría. */
+:root {
+  color-scheme: light;
+  --papel: #e9ecef;
+  --superficie: #f7f8f9;
+  --tinta: #1b2550;
+  --tinta-2: #4a5374;
+  --linea: #c3c8d5;
+  --acento: #9b1b3e;
+  --sobre-acento: #ffffff;
+  --c1: #2e4a9e;
+  --c2: #9b1b3e;
+  --c3: #a87410;
+  --bien: #4f6e34;
+  --parcial: #825a00;
+  --n1: #d0d5e6; --n2: #b0b9d7; --n3: #8e9bc5; --n4: #6c7bb0; --n5: #4e5d97; --n6: #34427a; --n7: #1b2550;
+  --texto: 'Spectral', Georgia, serif;
+  --ui: 'Archivo Variable', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='claro']) {
+    color-scheme: dark;
+    --papel: #141b3a; --superficie: #1d2548; --tinta: #e7e9f2; --tinta-2: #aeb5d0; --linea: #364070;
+    --acento: #f0849f; --sobre-acento: #23070f; --c1: #8aa3ea; --c2: #f0849f; --c3: #e0ac3e; --bien: #9cc177; --parcial: #e0ac3e;
+    --n1: #232c55; --n2: #2e3b6e; --n3: #3e4e8b; --n4: #5366a7; --n5: #7287c4; --n6: #9dafe0; --n7: #d3dcf8;
+  }
+}
+:root[data-tema='oscuro'] {
+  color-scheme: dark;
+  --papel: #141b3a; --superficie: #1d2548; --tinta: #e7e9f2; --tinta-2: #aeb5d0; --linea: #364070;
+  --acento: #f0849f; --sobre-acento: #23070f; --c1: #8aa3ea; --c2: #f0849f; --c3: #e0ac3e; --bien: #9cc177; --parcial: #e0ac3e;
+  --n1: #232c55; --n2: #2e3b6e; --n3: #3e4e8b; --n4: #5366a7; --n5: #7287c4; --n6: #9dafe0; --n7: #d3dcf8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font: 16px/1.55 var(--ui); display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; width: min(1320px, 100%); margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px) 80px; outline: none; }
+h1, h2, h3, h4 { line-height: 1.12; margin: 0 0 .5em; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--ui); font-stretch: 75%; font-weight: 700; }
+h1 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); line-height: 1.02; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.25rem; }
+p { margin: 0 0 1em; }
+a { color: var(--acento); text-underline-offset: 3px; }
+code { font-size: .86em; overflow-wrap: anywhere; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
+main:focus-visible { outline: none; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+.saltar { position: absolute; left: -999px; }
+.saltar:focus { left: 12px; top: 12px; z-index: 20; background: var(--superficie); padding: 8px 12px; }
+
+.barra { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 24px; height: 56px; padding: 0 clamp(16px, 4vw, 48px); background: var(--papel); border-bottom: 1px solid var(--tinta); }
+.marca { display: flex; align-items: center; gap: 10px; color: var(--tinta); font-weight: 750; font-stretch: 68%; font-size: 1.35rem; text-decoration: none; white-space: nowrap; }
+.barra nav { display: flex; align-self: stretch; gap: 22px; margin-left: auto; overflow-x: auto; }
+.cambio { display: flex; border: 1px solid var(--linea); flex: none; }
+.cambio a { padding: 4px 12px; font-size: .84rem; font-weight: 600; color: var(--tinta-2); text-decoration: none; white-space: nowrap; }
+.cambio a:hover { color: var(--tinta); }
+.cambio a[aria-current] { background: var(--tinta); color: var(--papel); }
+.barra nav a { display: flex; align-items: center; border-block: 3px solid transparent; color: var(--tinta-2); text-decoration: none; white-space: nowrap; }
+.barra nav a:hover { color: var(--tinta); }
+.barra nav a[aria-current] { color: var(--tinta); border-bottom-color: var(--acento); }
+.tema-boton { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border: 0; background: none; padding: 0; }
+
+.pie { border-top: 1px solid var(--tinta); padding: 22px clamp(16px, 4vw, 48px); color: var(--tinta-2); font-size: .85rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
+.pie p { margin: 0; }
+
+.acciones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.boton, .boton-mini { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--tinta); background: none; color: var(--tinta); text-decoration: none; font-weight: 550; }
+.boton { padding: 9px 16px; }
+.boton-mini { padding: 3px 10px; font-size: .8rem; border-color: var(--linea); }
+.boton:hover, .boton-mini:hover { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+.boton.primario { background: var(--acento); border-color: var(--acento); color: var(--sobre-acento); }
+.boton.primario:hover { background: var(--tinta); border-color: var(--tinta); color: var(--papel); }
+
+.pestanas { display: flex; gap: 20px; overflow-x: auto; border-bottom: 1px solid var(--linea); margin-bottom: 18px; }
+.pestanas button { background: none; border: 0; border-bottom: 3px solid transparent; padding: 8px 0; color: var(--tinta-2); white-space: nowrap; }
+.pestanas button[aria-selected='true'] { color: var(--tinta); border-bottom-color: var(--acento); font-weight: 650; }
+
+.entrada { font: 400 1.2rem/1.65 var(--texto); color: var(--tinta-2); max-width: 62ch; }
+.nota { font-size: .82rem; color: var(--tinta-2); line-height: 1.5; max-width: 80ch; }
+.columna { max-width: 860px; padding-top: 48px; }
+
+@media (max-width: 860px) {
+  .barra { flex-wrap: wrap; height: auto; row-gap: 0; padding-top: 8px; }
+  .barra nav { order: 3; width: 100%; height: 40px; margin: 0; }
+  .cambio { margin-left: auto; }
+}
+@media (max-width: 640px) {
+  .barra { flex-wrap: wrap; height: auto; row-gap: 0; padding-top: 8px; }
+  .barra nav { order: 3; width: 100%; height: 40px; margin: 0; gap: 8px; justify-content: space-between; font-size: .85rem; }
+  .barra { column-gap: 10px; }
+  .marca { font-size: 1.15rem; }
+  .cambio a { padding: 3px 7px; font-size: .74rem; }
+  .tema-boton { margin-left: 0; }
+}
+@media (max-width: 400px) {
+  .marca img { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
